@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.cooksdev.dagger2template.App;
+import com.cooksdev.dagger2template.presentation.MainPresenter;
 
 import javax.inject.Singleton;
 
@@ -28,5 +29,10 @@ public class AppModule {
     @Singleton
     SharedPreferences provideSharedPreferences(Context app) {
         return app.getSharedPreferences("My_pref_title", Context.MODE_PRIVATE);
+    }
+
+    @Provides
+    MainPresenter provideMainPresenter() {
+        return new MainPresenter();
     }
 }
