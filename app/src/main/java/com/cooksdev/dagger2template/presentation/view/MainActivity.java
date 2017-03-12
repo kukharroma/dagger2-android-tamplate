@@ -1,5 +1,6 @@
 package com.cooksdev.dagger2template.presentation.view;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -13,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     MainPresenter presenter;
+
+    @Inject
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

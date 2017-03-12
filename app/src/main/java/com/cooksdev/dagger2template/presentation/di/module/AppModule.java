@@ -3,6 +3,7 @@ package com.cooksdev.dagger2template.presentation.di.module;
 import android.content.Context;
 
 import com.cooksdev.dagger2template.App;
+import com.cooksdev.dagger2template.presentation.presenter.MainPresenter;
 
 import javax.inject.Singleton;
 
@@ -22,5 +23,11 @@ public class AppModule {
     Context provideContext() {
         return application;
     }
+
+//    @Provides
+//    @Singleton
+//    MainPresenter provideMainPresenter() {
+//        return new MainPresenter();
+//    }
 
 }

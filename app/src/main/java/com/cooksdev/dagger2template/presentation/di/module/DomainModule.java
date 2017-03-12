@@ -9,24 +9,24 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
-@Module
+//@Module
 public class DomainModule {
 
-    @Provides
-    @Named("cache")
-    GetUserUseCase provideGetUserUseCaseCache() {
-        GetUserUseCase getUserUseCase = new GetUserUseCase();
-        getUserUseCase.setCache(true);
-        return getUserUseCase;
-    }
+//    @Provides
+//    @Named("cache")
+//    GetUserUseCase provideGetUserUseCaseCache() {
+//        GetUserUseCase getUserUseCase = new GetUserUseCase();
+//        getUserUseCase.setCache(true);
+//        return getUserUseCase;
+//    }
 
-    @Provides
-    @Named("non_cache")
-    GetUserUseCase provideGetUserUseCaseNonCache() {
-        GetUserUseCase getUserUseCase = new GetUserUseCase();
-        getUserUseCase.setCache(false);
-        return getUserUseCase;
-    }
+//    @Provides
+//    @Named("non_cache")
+//    GetUserUseCase provideGetUserUseCaseNonCache() {
+//        GetUserUseCase getUserUseCase = new GetUserUseCase();
+//        getUserUseCase.setCache(false);
+//        return getUserUseCase;
+//    }
 
 //    @Provides
 //    @Singleton
