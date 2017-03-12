@@ -1,21 +1,22 @@
 package com.cooksdev.dagger2template.presentation.presenter;
 
 
-import javax.inject.Singleton;
+import com.cooksdev.dagger2template.domain.GetUserUseCase;
 
-//@Singleton
+import javax.inject.Inject;
 public class MainPresenter {
 
-//    @Inject
-//    @Named("cache")
-//    GetUserUseCase getUserUseCaseCache;
-//
-//    @Inject
-//    @Named("non_cache")
-//    GetUserUseCase getUserUseCaseNonCache;
+    public GetUserUseCase getUserUseCaseCache;
+    public GetUserUseCase getUserUseCaseNoNCache;
+
+    @Inject
+    public MainPresenter(GetUserUseCase getUserUseCase, GetUserUseCase getUserUseCaseNoNCache) {
+        this.getUserUseCaseCache = getUserUseCase;
+        this.getUserUseCaseNoNCache = getUserUseCaseNoNCache;
+    }
 
     public void getUser() {
-//        System.out.println(getUserUseCaseCache.getUser());
-//        System.out.println(getUserUseCaseNonCache.getUser());
+        System.out.println(getUserUseCaseCache.getUser());
+        System.out.println(getUserUseCaseNoNCache.getUser());
     }
 }

@@ -13,7 +13,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    MainPresenter presenter;
+    public MainPresenter presenter;
 
     @Inject
     Context context;
